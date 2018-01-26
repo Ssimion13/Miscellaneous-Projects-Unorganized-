@@ -1,0 +1,38 @@
+
+.mainheadline {
+  color: DarkGreen;
+
+}
+
+.headlines {
+  font-family: Georgia;
+  text-align: center;
+
+
+}
+
+p {
+  line-height: 25px;
+  font-size: 16px;
+
+
+
+}
+#someguy {
+  float: left;
+  height: 250px;
+  width: 250px;
+}
+
+
+#liked {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+
+}
+a:hover {
+  text-decoration: underline;
+}

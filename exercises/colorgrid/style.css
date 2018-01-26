@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    font-size: 0px;
+}
+
+.salmon {
+  display: block;
+  height: 150px;
+  background-color: #f5C6D6;
+  border: white 10px solid;
+}
+
+.pink {
+  display: inline-block;
+  height: 150px;
+  width: 25%;
+  background-color: #EE2EC4;
+  border: white 10px solid;
+}
+
+.lblue {
+  display: inline-block;
+  height: 150px;
+  width: 50%;
+  background-color: #85CDF8;
+  border: white 10px solid;
+}
+
+.green {
+  display: inline-block;
+  height: 150px;
+  width: 75%;
+  background-color: #8DC63F;
+  border: white 10px solid;
+}
+.orange {
+  display: inline-block;
+  height: 150px;
+  width: 25%;
+  background-color: #E76E34;
+  border: white 10px solid;
+}
