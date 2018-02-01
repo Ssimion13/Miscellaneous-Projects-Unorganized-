@@ -1,0 +1,28 @@
+#add {
+  background-color: lightgreen;
+  padding: 5px;
+  margin: 3px;
+}
+
+#multiply {
+  background-color: aliceblue;
+  padding: 5px;
+  margin: 3px;
+
+}
+
+
+#minus {
+  background-color: lightyellow;
+  padding: 5px;
+  margin: 3px;
+
+
+
+}
+
+#heading {
+  font: Arial;
+  font-size: 45px;
+  text-align: center;
+}

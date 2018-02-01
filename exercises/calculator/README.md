@@ -1,0 +1,1 @@
+This exercise was to test the ability to take inputs from the user via HTML and use them to make a simplistic calculator with 4 functions (+ - * /).

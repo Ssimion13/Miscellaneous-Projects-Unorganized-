@@ -1,0 +1,1 @@
+This exercise was to create a mock travel website form that tracks user information, such as name, date, age, gender, locations, etc.

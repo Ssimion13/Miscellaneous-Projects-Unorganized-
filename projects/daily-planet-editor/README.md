@@ -1,3 +1,1 @@
-# daily-planet-editor
-
-This is the file associated with the Daily Planet Editor project, which can be found at [coursework.vschool.io/daily-planet-editor/](http://coursework.vschool.io/daily-planet-editor/)
+This project was a test of debugging-- given a set of code that doesn't function and has several mistakes, make it work again.

@@ -1,0 +1,1 @@
+This exercise was to test out the ability to use if statements and functions. Make something print even for even numbers and odd for odd numbers.

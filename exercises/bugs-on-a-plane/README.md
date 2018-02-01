@@ -1,0 +1,1 @@
+A debugging exercise spanning HTML and Javascript, and event handlers.

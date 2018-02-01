@@ -1,0 +1,1 @@
+This was the first of exercises with functions of varying difficulties to ensure that I understand functions.

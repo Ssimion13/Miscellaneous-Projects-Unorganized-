@@ -1,0 +1,1 @@
+This exercise was to create a nested array that would print out something on top of something already printing from the array above it. 2d Arrays, as they say.

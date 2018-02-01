@@ -1,0 +1,1 @@
+Using object methods and objects nested in objects, made a ton of related objects for practice. It runs.

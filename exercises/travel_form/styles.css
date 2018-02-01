@@ -1,0 +1,16 @@
+#inputSwag {
+  background-color: aliceblue;
+  padding: 5px;
+  border: 1px black solid;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+#multipleChoice {
+  background-color: lightyellow;
+  padding: 5px;
+  border: 1px black solid;
+}

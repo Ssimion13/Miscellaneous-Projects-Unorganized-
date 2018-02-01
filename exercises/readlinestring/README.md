@@ -1,0 +1,1 @@
+Readlinesync practice--first time using readline in practice

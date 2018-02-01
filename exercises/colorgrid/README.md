@@ -1,0 +1,1 @@
+This exercise was to create a series of div separated squares and make them look nice and colored with good borders.                                   

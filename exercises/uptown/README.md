@@ -1,0 +1,1 @@
+This exercise was to use for loops to mess around with the orders of song lyrics. (eg. moving around individual lyrics, reversals)

@@ -1,0 +1,1 @@
+Creates a function that removes any duplicate letters in a string

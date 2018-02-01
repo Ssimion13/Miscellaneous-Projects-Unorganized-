@@ -1,0 +1,39 @@
+.navigation {
+  position: fixed;
+  height: 50px;
+  background-color: maroon;
+  width: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+}
+
+
+.text {
+  font-size: 20px;
+  font: Serif;
+  text-align: center;
+  display: inline-block;
+  float: center;
+}
+
+h1 {
+  text-align: center;
+  font: serif;
+}
+
+h3 {
+  text-align: center;
+  font: serif;
+}
+.post {
+  display: inline-block;
+  float:left;
+}
+.pictures {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  float: left;
+  margin: 10px;
+}

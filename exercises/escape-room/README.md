@@ -1,0 +1,1 @@
+This exercise was a practice for the RPG project-- make a choose your own adventure book. It practices using readline sync which can more easily take inputs by stopping the code until they are finished.

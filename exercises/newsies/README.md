@@ -1,0 +1,1 @@
+Created a newspaper-like website using CSS.

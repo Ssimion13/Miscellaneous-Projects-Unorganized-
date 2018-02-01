@@ -1,0 +1,1 @@
+This exercise was to test eventhandlers and link a square to different effects based on eventhandlers and the CSS linked to them.

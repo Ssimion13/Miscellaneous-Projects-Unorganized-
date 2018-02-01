@@ -1,0 +1,1 @@
+Fundamentally a website calculator, this website takes inputs from the user and calculates them using Javascript to return a value equal to the cost of the separate items together, alongside the total number of items.

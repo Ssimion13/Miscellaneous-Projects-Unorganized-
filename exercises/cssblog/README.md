@@ -1,0 +1,1 @@
+Kind of underwhelming, but an exercise to create a rudimentary blog. Uses Lorem ipsum in lieu of a more interesting text...but it fits.

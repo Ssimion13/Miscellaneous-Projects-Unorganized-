@@ -1,0 +1,1 @@
+Creates a random password of length determined by user. Also includes japanese characters in so you can't actually access anything with the password on an American keyboard.
