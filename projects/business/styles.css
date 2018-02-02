@@ -1,3 +1,5 @@
+
+
 h1 {
   text-align: center;
   color: Orange;
@@ -69,9 +71,10 @@ li a:hover {
   text-align: center;
 }
 
-#book {
-  height: 500px;
+.book {
+  height: 650px;
 }
+
 
 #navBar {
   width: 100%;
@@ -87,6 +90,38 @@ section {
   background-color: orange;
   border: 1px black solid;
   margin: 5px;
-  padding: 5px;
+  padding: 8px;
   font-size: 16px;
+}
+
+#support {
+  text-align: center;
+
+
+
+}
+
+@media (max-width: 600px) {
+  body {
+    align-items: center;
+  }
+ h1 {
+   align-items: center;
+ }
+ h2 {
+   align-items: center;
+ }
+ .book2 {
+   align-items: center;
+   width: 400px;
+   height: 400px;
+ }
+
+
+  section {
+  background-color: lightsalmon;
+}
+  #prologueContent: {
+    font-style: normal;
+  }
 }
