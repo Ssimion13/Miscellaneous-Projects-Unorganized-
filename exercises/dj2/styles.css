@@ -1,0 +1,52 @@
+.bawxes {
+  height: 200px;
+  width: 200px;
+  background-color: black;
+  border: 5px white solid;
+  display: inline-block;
+}
+
+#box1:hover {
+  transition-property: all;
+  transition-duration: .1s;
+  box-shadow: 5px 5px 4px 5px #888888;
+  background-color: purple;
+}
+
+#box2:hover {
+  transition-property: all;
+  transition-duration: .1s;
+  box-shadow: 5px 5px #102130;
+  background-color: lime;
+  border-radius: 3px 5px;
+}
+
+#box3:hover {
+  transition-property: all;
+  transition-duration: .1s;
+  box-shadow: None;
+  background-color: magenta;
+}
+
+#box4:hover {
+  transition-property: all;
+  transition-duration: .1s;
+  box-shadow: 20px #888888;
+  background-color: #239588;
+}
+
+#box5:hover {
+  transition-property: all;
+  transition-duration: .1s;
+  box-shadow: 5px 5px 4px 5px #888888;
+  background-color: gold;
+  border-color: gold;
+}
+
+#box6:hover {
+  transition-property: all;
+  transition-duration: .1s;
+  box-shadow: 5px 5px 4px 5px #888888;
+  border-color: silver;
+  background-color: silver;
+}

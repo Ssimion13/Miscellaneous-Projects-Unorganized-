@@ -12,8 +12,9 @@ var charmander = {
   level: 5,
   levelCounter: 0,
   type: "Fire",
+  attackName: "Scratch",
   elementalAttack: "Ember",
-  attack: 40,
+  attack: 50,
   defense: 20,
   defaultHP: 50,
   HP: 50
@@ -22,10 +23,11 @@ var charmander = {
 var squirtle = {
   name: "Squirtle",
   type: "Water",
+  attackName: "Tackle",
   elementalAttack: "Bubble",
   level: 5,
   levelCounter: 0,
-  attack: 20,
+  attack: 30,
   defense: 40,
   defaultHP: 50,
   HP: 50
@@ -34,11 +36,12 @@ var squirtle = {
 var bulbasaur = {
   name: "Bulbasaur",
   type: "Grass",
+  attackName: "Tackle",
   elementalAttack: "Razor Leaf",
   levelCounter: 0,
   level: 5,
-  attack: 30,
-  defense: 30,
+  attack: 35,
+  defense: 35,
   defaultHP: 50,
   HP: 50
 };
@@ -47,8 +50,9 @@ var enemyArray =[
  growlithe = {
   name: "Growlithe",
   type: "Fire",
+  attackName: "Tackle",
   elementalAttack: "Ember",
-  attack: 30,
+  attack: 25,
   defense: 10,
   defaultHP: 30,
   HP: 30
@@ -57,6 +61,7 @@ var enemyArray =[
  polywag = {
   name: "Polywag",
   type: "Water",
+  attackName: "Pound",
   elementalAttack: "Bubble",
   attack: 20,
   defense: 20,
@@ -67,6 +72,7 @@ var enemyArray =[
  oddish = {
   name: "Oddish",
   type: "Grass",
+  attackName: "Pound",
   elementalAttack: "Razor Leaf",
   attack: 20,
   defense: 15,
@@ -237,13 +243,13 @@ console.log("     >______)   /_/\/\_\                                     ");
              battleDecision = battleChoice();
           }
           if(battleDecision === "1"){
-            var useTyping = ask.question("Do you want to use " + playerPokemon.elementalAttack + " ?\n y/n ");
+            var useTyping = ask.question("Do you want to use the elemental attack " + playerPokemon.elementalAttack + " or use the normal type attack " + playerPokemon.attackName + "?\n  Press y to use " + playerPokemon.elementalAttack + " or n to use " + playerPokemon.attackName + ". ");
             if(useTyping === "y"){
               console.log(playerPokemon.name + " used " + playerPokemon.elementalAttack + " !")
               enemyPokemon.HP -= elementalFighting(playerPokemon, enemyPokemon);
               console.log(enemyPokemon.name + " HP remaining: " + enemyPokemon.HP);
             } else {
-            console.log(playerPokemon.name + " attacks!\n")
+            console.log(playerPokemon.name + " used " + playerPokemon.attackName + "! \n")
             enemyPokemon.HP -= fighting(playerPokemon, enemyPokemon);
             console.log(enemyPokemon.name + " HP remaining: " + enemyPokemon.HP);
           }
@@ -272,7 +278,7 @@ console.log("     >______)   /_/\/\_\                                     ");
           console.log(playerPokemon.name + " HP remaining: " + playerPokemon.HP + "\n\n");
 
         } else {
-        console.log("The wild \n" + enemyPokemon.name + " attacks!\n")
+        console.log("The wild \n" + enemyPokemon.name + " used " + enemyPokemon.attackName + "!\n")
         playerPokemon.HP -= fighting(enemyPokemon,playerPokemon);
         console.log(playerPokemon.name + " HP remaining: " + playerPokemon.HP);
         }
@@ -307,7 +313,7 @@ console.log("     >______)   /_/\/\_\                                     ");
     }
   }
   if(goal >= 20){
-  console.log("You made it to Viridian City! To be continued, Probably! ");
+  console.log("\n\n\nYou made it to Viridian City! To be continued? ");
 }
 
 
