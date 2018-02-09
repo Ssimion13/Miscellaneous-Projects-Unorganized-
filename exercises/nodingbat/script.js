@@ -80,7 +80,7 @@ console.log(newString);
 }
 frontBack("Chocolate");
 
-*/
+
 
 var notString=function(str) {
    if(str[0] !== "n" && str[1] !== "o" && str[2] !== "t"){
@@ -94,3 +94,95 @@ var notString=function(str) {
 }
 
 console.log(notString("Bears"));
+
+
+var endUp=function(str) {
+  if(str.length <= 3){
+    return str.toUpperCase();
+  } else {
+    var caps = str.substring(str.length -3, str.length ).toUpperCase();
+    return str.substring(0, str.length-3) + caps;
+  }
+
+}
+console.log(endUp("bee"));
+
+const batman = ["Batman", "Robin", "The Joker"];
+
+const superman = ["Superman", "Lex Luthor", "Someone else"];
+
+const combined = [...batman, ...superman + " b"];
+
+
+console.log(combined);
+
+
+
+
+const name = "Bob";
+const eyeColor = "Hazel";
+const array = [1,2,3,4,5]
+const person = {
+  name,
+  eyeColor,
+  ...array
+}
+
+console.log(person);
+person.Batman = "nanananananana";
+
+console.log(person);
+
+
+
+console.log(`my name is ${name} and I have eyes that are ${eyeColor}.`)
+
+
+var everyNth=function(str, n){
+  var counter = "";
+  for (var i = 0; i < str.length; i += n){
+    counter += str[i];
+    console.log("counter");
+  }
+  return counter;
+}
+console.log(everyNth("Whyererere", 3));
+
+
+var monkeyTrouble=function(aSmile, bSmile){
+  if(  (aSmile && bSmile) && (!aSmile && !bSmile)){
+     return true;
+  } else {
+     return false;
+
+}
+}
+
+
+var frontBack=function(str) {
+  var front = str[0];
+  var end = str[str.length -1];
+  var middle = str.substring(1, str.length -1);
+
+
+  return end + middle + front;
+
+}
+console.log(frontBack("Hellothere"));
+*/
+
+
+var posNeg=function(a, b, negative) {
+
+  if ( (a < 0 && b > 0) || (a > 0 && b < 0) ){
+    return true;
+  }
+   if(negative && a > 0 && b > 0){
+     return true;
+   } else {
+    return false;
+  }
+
+}
+
+console.log(posNeg(-4,-5,true));
