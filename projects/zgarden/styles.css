@@ -1,0 +1,33 @@
+
+.container{
+
+  display: grid;
+  width: 100%;
+  height: 100%;
+   grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: auto;
+  grid-template-areas:
+   "top top top top"
+   "left left right"
+   "bottom bottom bottom bottom";
+}
+
+#topContent{
+ grid-area: top;
+ background-color: blue;
+}
+
+#leftContent{
+ grid-area: left;
+  background-color: red;
+}
+
+#rightContent{
+ grid-area: right;
+  background-color: brown;
+}
+
+#bottomContent{
+ grid-area: bottom;
+  background-color: purple;
+}

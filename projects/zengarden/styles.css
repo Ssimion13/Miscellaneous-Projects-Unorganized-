@@ -1,0 +1,185 @@
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
+
+
+body {
+    font-family: 'libre Baskerville', sans-serif;
+
+
+}
+
+div > h1,h2{
+  color: white;
+}
+
+div> p{
+  font-family: 'libre Baskerville', sans-serif;
+  font-size: 12px;
+  line-height: 2;
+
+}
+
+#title{
+  font-size: 45px;
+}
+#titleHeading {
+  color: rgba(255,255,255,0.6);
+  font-style: italic;
+}
+.textHeader{
+  font-family: 'Julius Sans One', sans-serif;
+  color: #2e484c;
+}
+
+#topContent {
+  background: transparent;
+  width: 80%;
+  height: 300px;
+  top: 0;
+  display: inline-block;
+  transform:translate(10%);
+  float:left;
+}
+
+#topBanner{
+  width: 60%;
+
+
+}
+
+#banner {
+  vertical-align: middle;
+  text-align: left;
+  height: 200px;
+
+
+}
+
+#zen{
+  float:left;
+  margin: 5px;
+  padding: 10px;
+}
+
+#rightBox{
+  float: right;
+  right: -16%;
+  top: 0%;
+  background-color: #edf4f0;
+  width: 44%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+#moreDesigns {
+  width: 65%;
+  height: 25%;
+  position: relative;
+  background-color: grey;
+  color: white;
+  opacity: 1.50;
+  display: grid;
+  grid-template-areas:
+  "left texty texty right";
+  color: white;
+  z-index: 2;
+
+}
+
+#designText{
+  grid-area: texty;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  transform: translate(5%,35%);
+  color: white;
+  opacity: 1.50;
+}
+#leftArrow{
+  grid-area: left;
+  border-right: 1px solid white;
+}
+
+#rightArrow{
+  grid-area: right;
+  border-left: 1px solid white;
+}
+
+.textArrow {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  font-size: 44px;
+  color: white;
+
+
+
+}
+
+
+.leftContent {
+  padding: 5px;
+  height: 800px;
+  width: 65%;
+  display: inline-block;
+  float:left;
+  background-color: white;
+}
+
+.leftContent2 {
+  padding: 5px;
+  height: 600px;
+  width: 65%;
+  display: inline-block;
+  float:left;
+  background-color: white;
+}
+
+#rightContent{
+  height: 1957px;
+  width: 35%;
+  display: inline-block;
+  position: absolute;
+  background-color: #edf4f0;
+  padding-left: 65px;
+
+}
+
+#rightContentBox{
+  height: 80%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: auto;
+
+}
+
+.rightContentContents{
+
+  border-bottom: 1px solid black;
+}
+
+#bottomContent{
+  width: 100%;
+  height: 300px;
+  float:left;
+  display: inline-block;
+  position: absolute;
+  background-color: lightblue;
+}
+
+.greenSection {
+  background-attachment: scroll, scroll, fixed;
+    background-color: rgba(138,188,159,0.5);
+    width: 66%;
+    opacity: 0.95;
+    float:left;
+}

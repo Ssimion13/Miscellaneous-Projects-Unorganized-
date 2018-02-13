@@ -1,0 +1,84 @@
+{
+
+ "appetizers": [{
+
+   "cookies": {
+     "name": "cookies",
+     "isDelicious": "yes",
+     "cost": "4.99"
+   },
+   "beets": {
+     "name": "beets",
+     "isDelicious": "maybe?",
+     "cost": "3.50"
+   },
+   "donuts": {
+     "name": "donuts",
+     "isdelicious": "very yes",
+     "cost": "99c"
+   }
+}],
+
+ "cold sandwiches": [{
+
+   "ham and cheese": {
+     "ingredients": "ham and cheese",
+     "isgoodfordiet": "probably not",
+     "cost": "4.99"
+   },
+   "cold cut sandwich": {
+     "ingredients": "Salami and Bologna",
+     "isgoodfordiet": "better than the ham and cheese",
+     "cost": "3.69"
+   },
+   "Veggie Sub": {
+     "Incredients": "THE MOST INCREDIBLE INCREDIENTS YOU'VE EVER SEEN",
+     "isgoodfordiet": "DO YOU EVEN NEED TO ASK?",
+     "cost": "TOO MUCH FOR YOU, FOOL!"
+   }
+
+ }],
+
+ "hot sandwiches": [{
+
+   "French Dip": {
+     "Ingredients": "Au Jus and meat",
+     "isfancyashell": "Aw yus",
+     "cost": "3.5"
+   },
+   "Meatball Sub": {
+     "Ingredients": "Meatballs and stuff",
+     "isfancyashell": "Nah",
+     "cost": "2.99"
+   }
+ }],
+
+ "desserts": [{
+    "Kekki": {
+      "Cost": "5",
+      "Allergies": "Nuts, Strawberries"
+    },
+    "Aisu Kuriimu": {
+      "Cost": "2",
+      "Allergies": "Everything"
+    }
+
+
+
+ }],
+
+ "drinks": [{
+    "Coffee": {
+      "Cost": "3",
+      "hasCaffeine": "Yes"
+    },
+    "Diet Coke": {
+     "Cost": "2",
+     "hasCaffeine": "No",
+     "isActuallyGood": "No"
+
+    }
+ }]
+
+
+}

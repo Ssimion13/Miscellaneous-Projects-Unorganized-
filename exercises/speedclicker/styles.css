@@ -1,0 +1,21 @@
+#button {
+  width: 400px;
+  height: 400px;
+  background-color: red;
+}
+
+
+#counter {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+
+}
+
+#button2 {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  background-color: black;
+
+}
