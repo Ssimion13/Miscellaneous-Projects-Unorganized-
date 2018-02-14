@@ -7,8 +7,8 @@
   <link href="styles.css" rel="stylesheet" />
   <title>Document</title>
 </head>
-<body background = "huntington.jpg" , "contours-opaque.jpg", "gridlines.jpg">
-
+<body >
+  <div id="wrapper">
   <header id="topContent">
     <div id="topBanner">
      <div id="banner">
@@ -24,7 +24,6 @@
        <div class="textArrow" id="rightArrow"> > </div>
      </div>
      </div>
-   </div>
 </header>
 <div style="clear:both;"></div>
 
@@ -72,13 +71,14 @@ CSS allows complete and total control over the style of a hypertext document. Th
 </div>
 <div id="rightContent">
 <div id="rightContentBox">
+
   <div class = "rightContentContents" id= "1">
     <h4> UNDER THE SEA! </h4>
-      <span> By </span> Eric Stoltz
+      <span class="rightText"> By </span> Eric Stoltz
   </div>
   <div class = "rightContentContents" id= "2">
     <h4> MAKE 'EM PROUD </h4>
-      <span> By </span> Michael McAghon and Scotty Reifsnyder
+      <span> By </span> Michael McAghon and <br><br> Scotty Reifsnyder
   </div>
   <div class = "rightContentContents" id= "3">
     <h4> ORCHID BEAUTY </h4>
@@ -110,8 +110,20 @@ CSS allows complete and total control over the style of a hypertext document. Th
 
 <div style="clear:both;"></div>
 
-<div id="bottomContent"> bottomcontent</div>
+<div id="bottomContent">
+<div id="bottomText">
+<p id="fancyText"> By <span class="fancierText">Dave Shea.</span> Bandwidth graciously donated by <br> <span class="fancierText">mediatemple</span>. Now available: <span class="fancierText"> Zen Garden, the book. </span> </p>
 
+</div>
+<div id="bottomBar">
+  <div class = "bottomOnes" id="ichi"> 5 </div>
+  <div class = "bottomOnes" id="ni"> 3</div>
+  <div class = "bottomOnes" id="san"> C</div>
+  <div class = "bottomOnes" id="yon"> A</div>
+  <div class = "bottomOnes" id="go">G </div>
+</div>
 
+</div>
+</div>
 </body>
 </html>

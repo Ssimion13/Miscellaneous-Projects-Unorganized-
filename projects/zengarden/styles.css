@@ -1,10 +1,20 @@
 @import url(http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
+@font-face {
+	font-family: 'verdemoderna';
+  src: url("verdemoderna.woff");
+}
+
+
+@media(min-width: 960px) {
+}
 
 
 body {
     font-family: 'libre Baskerville', sans-serif;
-
-
+    background-image: url("./huntington.jpg"), url("contours-opaque.png"), url("gridlines-opaque.png");
+    background-size: contain, cover;
+    background-repeat: repeat, repeat;
+    background-position: left top, center top;
 }
 
 div > h1,h2{
@@ -16,6 +26,16 @@ div> p{
   font-size: 12px;
   line-height: 2;
 
+}
+
+h4 {
+      font-family: 'Julius Sans One', sans-serif;
+}
+
+.rightText {
+  color: #c0cac3;
+  font-size: 16px;
+  font-style: italic;
 }
 
 #title{
@@ -32,12 +52,14 @@ div> p{
 
 #topContent {
   background: transparent;
+	background-size: cover,cover,cover;
   width: 80%;
   height: 300px;
   top: 0;
   display: inline-block;
   transform:translate(10%);
   float:left;
+	grid-area: topContent;
 }
 
 #topBanner{
@@ -62,10 +84,10 @@ div> p{
 
 #rightBox{
   float: right;
-  right: -16%;
+  right: -22%;
   top: 0%;
   background-color: #edf4f0;
-  width: 44%;
+  width: 50%;
   height: 100%;
   position: absolute;
   opacity: 0.30;
@@ -119,9 +141,6 @@ div> p{
 
   font-size: 44px;
   color: white;
-
-
-
 }
 
 
@@ -132,6 +151,7 @@ div> p{
   display: inline-block;
   float:left;
   background-color: white;
+	grid-area: leftContent;
 }
 
 .leftContent2 {
@@ -141,6 +161,7 @@ div> p{
   display: inline-block;
   float:left;
   background-color: white;
+	grid-area: leftContent2;
 }
 
 #rightContent{
@@ -150,36 +171,105 @@ div> p{
   position: absolute;
   background-color: #edf4f0;
   padding-left: 65px;
+	grid-area: right;
 
 }
 
+
 #rightContentBox{
+  margin-top: 80px;
   height: 80%;
   width: 100%;
   display: grid;
   grid-template-rows: repeat(12, 1fr);
   grid-template-columns: auto;
+  line-height: 0.8;
 
 }
+
+
 
 .rightContentContents{
 
   border-bottom: 1px solid black;
+  margin: 8px;
+
 }
 
 #bottomContent{
-  width: 100%;
-  height: 300px;
+  width: 105%;
+  height: 500px;
   float:left;
   display: inline-block;
   position: absolute;
-  background-color: lightblue;
+  background-color: transparent;
+	grid-area: bottomContent;
+}
+#bottomText{
+  width:100%;
+  height: 60%;
+  justify-content: center;
+  text-align: center;
+  transform:translateY(25%);
+}
+#fancyText{
+  font-size: 30px;
+  font-style: italic;
+  color: #4F6e77;
+
+}
+#bottomBar {
+  width: 100%;
+  height: 40%;
+  float:left;
+  bottom: 0%;
+  position: absolute;
+  background-color: #134347;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-areas:
+    ". . ichi ni san yon go . .";
+
+}
+#ichi{
+  grid-area: ichi;
+      transform:translateY(32%);
+}
+#ni{
+  grid-area: ni;
+      transform:translateY(32%);
+}
+#san{
+  grid-area: san;
+      transform:translateY(32%);
+}
+#yon{
+  grid-area: yon;
+      transform:translateY(32%);
+}
+#go{
+  grid-area: go;
+    transform:translateY(32%);
+}
+
+.bottomOnes{
+  justify-content: center;
+  text-align: center;
+  font-family: "verdemoderna";
+  font-size: 65px;
+}
+
+.fancierText{
+  color: rgba(255, 255, 255, 0.7);
+  font-style: normal;
+  font-size: 30px;
+
 }
 
 .greenSection {
-  background-attachment: scroll, scroll, fixed;
     background-color: rgba(138,188,159,0.5);
+		background-attachment: scroll, scroll;
+		background-image: url(contours-opaque.png), url(gridlines-opaque.png);
     width: 66%;
-    opacity: 0.95;
     float:left;
 }

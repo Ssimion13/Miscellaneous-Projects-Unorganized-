@@ -1,33 +1,338 @@
-
-.container{
-
-  display: grid;
-  width: 100%;
-  height: 100%;
-   grid-template-columns: 200px 200px 200px 200px;
-  grid-template-rows: auto;
-  grid-template-areas:
-   "top top top top"
-   "left left right"
-   "bottom bottom bottom bottom";
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
+@font-face {
+	font-family: 'verdemoderna';
+  src: url("verdemoderna.woff");
 }
 
-#topContent{
- grid-area: top;
- background-color: blue;
+html{
+	background-image: url("./huntington.jpg"), url("contours-opaque.png"), url("gridlines-opaque.png"); */
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	background-repeat: repeat, repeat;
+	background-position: 0 0, 0 0, -5px -25px, 0 50%;
 }
 
-#leftContent{
- grid-area: left;
-  background-color: red;
+
+
+body {
+    font-family: 'libre Baskerville', sans-serif;
+
+		display:grid;
+		grid-template-columns: repeat(3,1fr);
+		grid-template-rows: auto;
+    grid-template-areas:
+		"topContent topContent  topContent"
+		"leftContent leftContent  RightContent"
+	  "leftContent leftContent  RightContent"
+		"greenSection greenSection  RightContentGreen"
+		"leftContent2 leftContent2 RightContentblank"
+		"leftContent2 leftContent2 RightContentblank"
+		"bottomContent bottomContent  bottomContent";
+	}
+
+	#topContent {
+	  background: transparent;
+		background-size: cover,cover,cover;
+		grid-area: topContent;
+		display:grid;
+		grid-template-columns: repeat(3,1fr);
+		grid-template-areas:
+		"Logo Logo Box";
+
+	}
+	#topBanner{
+		grid-area: Logo;
+
+
+	}
+
+	#banner {
+	  vertical-align: middle;
+	  text-align: left;
+	  height: 200px;
+		width: 600px;
+    transform:translate(25%, 5%);
+
+
+	}
+	#title{
+		float: left;
+		display: relative;
+	  font-size: 36px;
+	}
+	#titleHeading {
+		float:left;
+		display: relative;
+	  color: rgba(255,255,255,0.6);
+	  font-style: italic;
+	}
+
+	#zen{
+		float: left;
+	  display: relative;
+	  margin: 5px;
+	  padding: 10px;
+	}
+
+	#rightBox{
+
+	  background-color: #edf4f0;
+	  display: flex;
+		opacity: 0.5;
+		grid-area: Box;
+	  justify-content: center;
+	  align-items: center;
+
+	}
+
+	#moreDesigns {
+	  width: 65%;
+	  height: 25%;
+	  position: relative;
+	  background-color: grey;
+	  color: white;
+	  display: grid;
+	  grid-template-areas:
+	  "left texty texty right";
+	  color: white;
+	  z-index: 2;
+
+	}
+
+	#designText{
+	  grid-area: texty;
+	  justify-content: center;
+	  align-items: center;
+		text-align: center;
+	  font-size: 17px;
+	  color: white;
+	  opacity: 1.50;
+	}
+	#leftArrow{
+	  grid-area: left;
+	  border-right: 1px solid white;
+	}
+
+	#rightArrow{
+	  grid-area: right;
+	  border-left: 1px solid white;
+	}
+
+	.textArrow {
+	  height: 100%;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  width: 100%;
+
+	  font-size: 44px;
+	  color: white;
+	}
+
+@media(max-width: 960px) {
+	body{
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(10, auto);
+		grid-template-areas:
+		"topContent"
+		"leftContent"
+		"leftContent"
+		"greenSection"
+		"greenSection"
+		"leftContent2"
+		"leftContent2"
+		"bottomContent"
+		"RightContent"
+	"RightContentGreen";
+	}
+	#topContent{
+   grid-template-areas:
+	 "Logo Logo Logo"
+	 "Logo Logo Logo"
+	 "Box Box Box";
+	}
+
+
+
+}
+
+div > h1,h2{
+  color: white;
+}
+
+
+
+div> p{
+  font-family: 'libre Baskerville', sans-serif;
+  font-size: 20px;
+  line-height: 2;
+
+}
+
+h4 {
+      font-family: 'Julius Sans One', sans-serif;
+}
+
+.rightText {
+  color: #c0cac3;
+  font-size: 16px;
+  font-style: italic;
+}
+
+
+.textHeader{
+  font-family: 'Julius Sans One', sans-serif;
+	font-size: 30px;
+  color: #2e484c;
+}
+
+
+
+
+
+.leftContent {
+  padding-left: 15%;
+  background-color: white;
+	grid-area: leftContent;
+}
+
+.leftContent2 {
+  padding: 5px;
+
+  background-color: white;
+	grid-area: leftContent2;
 }
 
 #rightContent{
- grid-area: right;
-  background-color: brown;
+  background-color: #edf4f0;
+  padding-left: 65px;
+	grid-area: RightContent;
+
+}
+#rightContentblank{
+  background-color: #edf4f0;
+  padding-left: 65px;
+	grid-area: RightContentblank;
+}
+#rightContentGreen{
+
+	background-color: rgba(138,188,159,0.8);
+	background-attachment: scroll, scroll;
+	background-image: url(contours-opaque.png), url(gridlines-opaque.png);
+  padding-left: 65px;
+	grid-area: RightContentGreen;
+
+}
+
+
+#rightContentBox{
+  margin-top: 80px;
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: auto;
+  line-height: 0.8;
+
+}
+
+#rightContentGreenBox{
+  margin-top: 80px;
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: auto;
+  line-height: 0.8;
+
+}
+.rightContentGreenBoxContents{
+
+  border-bottom: 1px solid black;
+  margin: 8px;
+
+}
+
+.rightContentContents{
+
+  border-bottom: 1px solid black;
+  margin: 8px;
+
 }
 
 #bottomContent{
- grid-area: bottom;
-  background-color: purple;
+  width: 105%;
+  height: 500px;
+  float:left;
+  background-color: transparent;
+	grid-area: bottomContent;
+	display: grid;
+	grid-template-rows: repeat(3,1fr);
+	grid-template-areas:
+	"Text"
+	"Text"
+	"Icon";
+}
+#bottomText{
+  grid-area: Text;
+  justify-content: center;
+  text-align: center;
+  transform:translateY(25%);
+
+}
+#fancyText{
+  font-size: 30px;
+  font-style: italic;
+  color: #4F6e77;
+
+}
+#bottomBar {
+  grid-area: Icon;
+  background-color: #134347;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-areas:
+    ". . ichi ni san yon go . .";
+
+}
+#ichi{
+  grid-area: ichi;
+      transform:translateY(32%);
+}
+#ni{
+  grid-area: ni;
+      transform:translateY(32%);
+}
+#san{
+  grid-area: san;
+      transform:translateY(32%);
+}
+#yon{
+  grid-area: yon;
+      transform:translateY(32%);
+}
+#go{
+  grid-area: go;
+    transform:translateY(32%);
+}
+
+.bottomOnes{
+  justify-content: center;
+  text-align: center;
+  font-family: "verdemoderna";
+  font-size: 65px;
+}
+
+.fancierText{
+  color: rgba(255, 255, 255, 0.7);
+  font-style: normal;
+  font-size: 30px;
+
+}
+
+.greenSection {
+	  padding-left: 15%;
+		padding-right: 4%;
+    background-color: rgba(138,188,159,0.5);
+		background-attachment: scroll, scroll;
+		background-image: url(contours-opaque.png), url(gridlines-opaque.png);
+		grid-area: greenSection;
 }

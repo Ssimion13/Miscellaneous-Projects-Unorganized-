@@ -169,7 +169,7 @@ var frontBack=function(str) {
 
 }
 console.log(frontBack("Hellothere"));
-*/
+
 
 
 var posNeg=function(a, b, negative) {
@@ -186,3 +186,21 @@ var posNeg=function(a, b, negative) {
 }
 
 console.log(posNeg(-4,-5,true));
+
+
+
+
+
+var front22=function(str) {
+  if(str.length > 2){
+var front2 = str[0] + str[1];
+  return front2 + front22 + front2;
+} else {
+  return str + str + str;
+}
+
+}
+
+console.log(front22(""))
+
+*/
