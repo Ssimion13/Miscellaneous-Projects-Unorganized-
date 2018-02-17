@@ -4,18 +4,6 @@
   src: url("verdemoderna.woff");
 }
 
-html{
-	background-image: url("./huntington.jpg"), url("contours-opaque.png"), url("gridlines-opaque.png"); */
-	-webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-	background-repeat: repeat, repeat;
-	background-position: 0 0, 0 0, -5px -25px, 0 50%;
-}
-
-
-
 body {
     font-family: 'libre Baskerville', sans-serif;
 
@@ -33,17 +21,30 @@ body {
 	}
 
 	#topContent {
-	  background: transparent;
+
+		background-image: url(contours.png), url(noise.png), url(gridlines.png), url(huntington.jpg);
+	  background-position: 0 0, 0 0, -5px -25px, 0 50%;
+	  background-repeat: repeat, repeat, repeat, no-repeat;
+	  background-size: auto, auto, auto, cover;
+		-webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+		height: 250px;
 		background-size: cover,cover,cover;
 		grid-area: topContent;
 		display:grid;
+
 		grid-template-columns: repeat(3,1fr);
 		grid-template-areas:
 		"Logo Logo Box";
 
 	}
 	#topBanner{
+	  display: flex;
 		grid-area: Logo;
+		justify-content: center;
+		align-items: center;
+
 
 
 	}
@@ -53,18 +54,26 @@ body {
 	  text-align: left;
 	  height: 200px;
 		width: 600px;
-    transform:translate(25%, 5%);
+    transform:translate(0%, 5%);
+		justify-content: center;
+		align-items: center;
+
 
 
 	}
-	#title{
+	#titleSet{
 		float: left;
 		display: relative;
-	  font-size: 36px;
+    transform: translateY(-15%);
+	}
+	#title{
+		letter-spacing: 5px;
+		font-size: 36px;
+		font-family: "Julius Sans One", sans-serif;
+		font-weight: normal;
 	}
 	#titleHeading {
-		float:left;
-		display: relative;
+
 	  color: rgba(255,255,255,0.6);
 	  font-style: italic;
 	}
@@ -78,26 +87,28 @@ body {
 
 	#rightBox{
 
-	  background-color: #edf4f0;
+
 	  display: flex;
-		opacity: 0.5;
 		grid-area: Box;
 	  justify-content: center;
 	  align-items: center;
+		 margin-bottom: 10px;
 
 	}
 
 	#moreDesigns {
+		background-color: rgba(192,192,192,0.25);
 	  width: 65%;
 	  height: 25%;
 	  position: relative;
 	  background-color: grey;
 	  color: white;
 	  display: grid;
+		opacity: 0.8;
 	  grid-template-areas:
 	  "left texty texty right";
 	  color: white;
-	  z-index: 2;
+
 
 	}
 
@@ -108,16 +119,20 @@ body {
 		text-align: center;
 	  font-size: 17px;
 	  color: white;
-	  opacity: 1.50;
 	}
 	#leftArrow{
+		display: none;
+		font-family: "verdemoderna";
 	  grid-area: left;
 	  border-right: 1px solid white;
+    text-align: center;
 	}
 
 	#rightArrow{
 	  grid-area: right;
+		font-family: "verdemoderna";
 	  border-left: 1px solid white;
+		text-align: center;
 	}
 
 	.textArrow {
@@ -152,11 +167,26 @@ body {
 	 "Logo Logo Logo"
 	 "Logo Logo Logo"
 	 "Box Box Box";
+	 margin-bottom: 12px;
 	}
-
-
+#leftArrow{
+	display: inline-block;
+}
+#banner{
+	text-align: center;
+}
+#rightBox{
+	opacity: 0.5;
+}
+div> p{
+  font-family: 'libre Baskerville', sans-serif;
+  font-size: 20px;
+  line-height: 2;
 
 }
+
+}
+
 
 div > h1,h2{
   color: white;
@@ -166,7 +196,7 @@ div > h1,h2{
 
 div> p{
   font-family: 'libre Baskerville', sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 2;
 
 }
@@ -196,11 +226,12 @@ h4 {
   padding-left: 15%;
   background-color: white;
 	grid-area: leftContent;
+	padding-right: 5%;
 }
 
 .leftContent2 {
-  padding: 5px;
-
+  padding-left: 15%;
+  padding-right: 5%;
   background-color: white;
 	grid-area: leftContent2;
 }
@@ -220,7 +251,7 @@ h4 {
 
 	background-color: rgba(138,188,159,0.8);
 	background-attachment: scroll, scroll;
-	background-image: url(contours-opaque.png), url(gridlines-opaque.png);
+	background-image: url(contours-opaque.png), url(gridlines-opaque.png), url(bamboo.png);
   padding-left: 65px;
 	grid-area: RightContentGreen;
 
@@ -247,18 +278,25 @@ h4 {
 .rightContentGreenBoxContents{
 
   border-bottom: 1px solid black;
-  margin: 8px;
+  margin: 10px;
 
 }
 
 .rightContentContents{
 
   border-bottom: 1px solid black;
-  margin: 8px;
+  margin: 12px;
 
 }
 
 #bottomContent{
+	background-image: url(contours.png), url(noise.png), url(gridlines.png), url(huntington.jpg);
+	background-position: 0 0, 0 0, -5px -25px, 0 50%;
+	background-repeat: repeat, repeat, repeat, no-repeat;
+	background-size: auto, auto, auto, cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
   width: 105%;
   height: 500px;
   float:left;
@@ -281,7 +319,8 @@ h4 {
 #fancyText{
   font-size: 30px;
   font-style: italic;
-  color: #4F6e77;
+  color: #D3D3D4;
+	opacity: 0.80;
 
 }
 #bottomBar {
@@ -322,7 +361,7 @@ h4 {
 }
 
 .fancierText{
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   font-style: normal;
   font-size: 30px;
 
@@ -333,6 +372,49 @@ h4 {
 		padding-right: 4%;
     background-color: rgba(138,188,159,0.5);
 		background-attachment: scroll, scroll;
-		background-image: url(contours-opaque.png), url(gridlines-opaque.png);
+		background-image: url(contours-opaque.png), url(gridlines-opaque.png), url(bamboo.png);
 		grid-area: greenSection;
+}
+
+@media(max-width: 627px) {
+
+	#banner{
+		align-items: center;
+		vertical-align: center;
+		transform:translateY(15%)
+	}
+	#titleSet{
+		transform:translateY(15%);
+	}
+	#zen{
+		width: 100px;
+		height: 100px;
+	}
+  #title{
+		font-size: 15px;
+	}
+	#titleHeading{
+		font-size: 15px;
+	}
+
+
+	#designText{
+		font-size: 12px;
+	}
+	.fancierText{
+	  color: rgba(255, 255, 255, 0.9);
+	  font-style: normal;
+	  font-size: 25px;
+
+	}
+	#fancyText{
+	  font-size: 22px;
+	  font-style: italic;
+	  color: #D3D3D4;
+		opacity: 0.80;
+
+}
+.bottomOnes{
+	font-size: 32px;
+}
 }
