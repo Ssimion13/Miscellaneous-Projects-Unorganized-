@@ -1,0 +1,113 @@
+body {
+  background-color: lightgrey;
+}
+.division1{
+  border: 1px black solid;
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background-color: orange;
+  grid-template-areas:
+  "paragraph paragraph picture"
+   "paragraph paragraph picture"
+  "paragraph2 paragraph2 picture"
+}
+.ballers {
+  margin: auto;
+  text-align: center;
+  margin-left: 40px;
+}
+.division2{
+    border: 1px black solid;
+      background-color: orange;
+    margin-top: 5px;
+    display: grid;
+    grid-template-areas:
+    "picture2 paragraph3"
+
+}
+.division3{
+    border: 1px black solid;
+    margin-top: 5px;
+      background-color: orange;
+}
+
+.paragraph1 {
+  color: black;
+  margin-left: 10px;
+  grid-area: paragraph;
+}
+.paragraph2{
+  color: black;
+  margin-left: 10px;
+  grid-area: paragraph2;
+}
+.paragraph3{
+  color: black;
+  margin-left: 10px;
+  font-size: 35px;
+  grid-area: paragraph3;
+}
+.picture1 {
+  width: 250px;
+  height: 250px;
+  grid-area: picture
+}
+.picture2 {
+  width: 250px;
+  height: 250px;
+  grid-area: picture2
+}
+h2 {
+  font-family: helvetica;
+  text-align: center;
+  font-size: 34px;
+}
+
+h1 {
+  font-family: helvetica;
+  text-align: center;
+  font-size: 44px;
+}
+
+p {
+  font-size: 20px;
+  font-family: arial sans-serif;
+}
+
+
+.navBar {
+  width: 100%;
+  height: auto;
+  background-color: grey;
+  text-align: center;
+}
+li {
+
+}
+
+.navLinks {
+  float: left;
+  display: block;
+  padding: 12px 14px;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+
+.navLinks:hover {
+  background-color: #111;
+}
+.navUL {
+  top: 0;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.links {
+  color: black;
+}
