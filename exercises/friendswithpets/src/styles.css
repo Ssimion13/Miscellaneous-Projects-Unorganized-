@@ -1,0 +1,25 @@
+body {
+  background-color: lightyellow;
+}
+
+.fuck {
+  color: darkorange;
+  text-align: center;
+}
+
+.petDiv {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px black solid;
+  padding-left: 10px;
+  width: 40%;
+}
+
+h4 {
+  font-size: 20px;
+  font-family: helvetica;
+}
+
+.friendos {
+  text-align: center;
+}
