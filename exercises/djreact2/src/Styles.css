@@ -1,0 +1,28 @@
+.GridofSquares {
+  display: grid;
+  width: 400px;
+  height: 800px;
+
+  grid-template-areas:
+  "Square1  Square2"
+  "Square3  Square4"
+}
+
+.Square1 {
+  grid-area: Square1;
+
+}
+
+.Square2 {
+  grid-area: Square2;
+
+}
+
+.Square3 {
+  grid-area: Square3;
+}
+
+.Square4 {
+  grid-area: Square4;
+
+}

@@ -7,7 +7,7 @@ import React, {Component} from "react";
     super();
     this.state = {
       name: "",
-      person: []
+      person: [ ]
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,21 +17,26 @@ handleSubmit(e){
   //e is event
   //e.target is the entire form
  e.preventDefault();
- this.setState({
-   ["name"]: ""
- })
+ let localstate = {
+   person: [...this.state.person,
+   this.state.name
+   ]
+ }
+ console.log(localstate)
+ this.setState(localstate);
 };
 
 handleChange(e){
   console.log(e.target.value);
   this.setState({
-    ["name"]: e.target.value
+    "name": e.target.value
   })
 
 }
 
 
   render(){
+    
     return(
     <div>
       <h1> {this.state.name} </h1>
@@ -39,9 +44,15 @@ handleChange(e){
         <input onChange = {this.handleChange}/>
         <button> Submit </button>
       </form>
+      <div>
+         <ul>
+          {this.state.person.map((person, index) => {
+            return (<li key={person + index}> {person} </li>)})}
+         </ul>
+      </div>
     </div>
   )
-}
+};
 }
 
 

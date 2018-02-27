@@ -60,7 +60,7 @@ const friends = [
 ]
 
 function FriendsList(){
-    const mappedFriends = friends.map((friend, i) => {
+
         return <Friend 
             
             name={friend.name} 
