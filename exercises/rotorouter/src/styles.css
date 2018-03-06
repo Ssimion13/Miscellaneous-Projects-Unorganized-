@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica sans-serif;
+}
+
+.home {
+  width: 100%;
+  height: 600px;
+  border: 1px solid black;
+  margin-top: 10px;
+  padding-top: 50px;
+  background-color: papayawhip;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.contact {
+  width: 100%;
+  height: 600px;
+  border: 1px solid black;
+  margin-top: 10px;
+  padding-top: 50px;
+  background-color: yellow;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.about {
+
+    width: 100%;
+    height: 600px;
+    border: 1px solid black;
+    margin-top: 10px;
+    padding-top: 50px;
+    background-color: orange;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+
+.heading {
+  width: 100%;
+  height: 80px;
+  color: white;
+  background-color: black;
+  display: grid;
+  grid-template-areas:
+  "title . link link2 link3"
+
+}
+
+.footer {
+  width: 100%;
+  height: 80px;
+  color: white;
+  background-color: black;
+  display: grid;
+
+}
+
+
+.title {
+  font-size: 35px;
+  vertical-align: center;
+  text-align: center;
+  margin: auto;
+  grid-area: title;
+
+}
+
+.Name {
+  border: 1px black solid;
+  grid-area: Name;
+  margin: auto;
+  font-size: 20px
+}
+
+.link {
+  grid-area: link;
+  margin: auto;
+  color: red;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+.link2 {
+  grid-area: link2;
+  margin: auto;
+  color: red;
+  text-decoration: none;
+  font-size: 20px;
+}
+.link3 {
+  grid-area: link3;
+  margin: auto;
+  color: red;
+  text-decoration: none;
+  font-size: 20px;
+}

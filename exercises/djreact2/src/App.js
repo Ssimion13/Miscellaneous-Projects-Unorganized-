@@ -43,7 +43,7 @@ class App extends Component{
       square1: "Purple",
       square2: "Purple",
       square3: "Red",
-      square4: "Red"
+      square4: "Red"WQQ
     }
     this.setState({colors:localstate});
   }
@@ -51,14 +51,14 @@ class App extends Component{
 //create button, set to buttonone function. Check with juan to ensure that it flips between black and white. Or something.....
 
   render(){
-  return(
-  <div>
-  <Grid colors = {this.state.colors}/>
-  <button  onClick = {this.handleButtonOne}> Let the Bass Drop </button>
-  <button onClick = {this.handleButtonTwo}> Let the Top Bass Drop </button>
-  </div>
-)
-}
+      return(
+          <div>
+              <Grid colors = {this.state.colors}/>
+              <button  onClick = {this.handleButtonOne}> Let the Bass Drop </button>
+              <button onClick = {this.handleButtonTwo}> Let the Top Bass Drop </button>
+          </div>
+        )
+    }
 }
 
 export default App;
