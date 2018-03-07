@@ -1,22 +1,10 @@
-export function increment(name){
-  return {
-    type: "INCREMENT",
-    name: name
-  }
-}
+import {createStore, applyMiddleware} from "redux";
+import thunk from "redux-thunk";
+import  reducer from "./Functions";
 
 
-
-
-
-function reducer(prevState = {counter: 0}, action){
-    switch(action.type){
-      case "INCREMENT":
-        return {counter: prevState.counter + 1};
-
-      default:
-      return prevState;
-    }
-}
-
-export default reducer;
+export default createStore(
+    reducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    applyMiddleware(thunk)
+);
