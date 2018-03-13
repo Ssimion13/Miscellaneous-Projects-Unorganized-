@@ -1,8 +1,27 @@
 const express = require("express")
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/bountyhunter');
 const app = express();
 const uuid = require('uuid/v1');
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
+
+
+const Schema = mongoose.Schema;
+
+const bountySchema = new Schema({
+  fName: String,
+  lName: String,
+  Living: String,
+  bAmount: String,
+  type: String
+})
+
+const Bounty = mongoose.model('Bounty',bountySchema);
+
+
+
+
 
 const bounties = [
   {
