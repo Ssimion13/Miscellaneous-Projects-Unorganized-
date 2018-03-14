@@ -22,6 +22,8 @@ app.get("/posts/:id", (req,res) => {
 
 app.post("/posts", (req,res) => {
   req.body.id = uuid();
+  req.body.karma = 0;
+  req.body.comments = [];
   console.log(req.body);
   posts.push(req.body);
   return res.send(req.body);
