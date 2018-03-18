@@ -34,9 +34,11 @@ class FormComponent extends Component{
 
    const topState = this.props.state;
    const posts = topState.posts.slice();
-   const foundPost = posts.find(post => post.id === targetPost);
+   const foundPost = posts.find(post => post._id === targetPost);
    foundPost.comments.push(comment);
-   axios.put(`/posts/${foundPost.id}`, foundPost)
+   console.log(foundPost);
+   console.log(foundPost._id)
+   axios.put(`/post/${foundPost._id}`, foundPost)
       this.setState({ posts })
 
  }
@@ -44,9 +46,12 @@ class FormComponent extends Component{
 
 
 render(){
-const batman = this.props.comments.map( (x,i) => {
-  return (<div key = {x+i}>
-  {x.username} {x.comment}
+const mappedComments = this.props.comments.map( (x,i) => {
+  return (<div className = "comments" key = {x+i}>
+    <div className = "commentbox">
+      <h4> {x.username} commented: </h4>
+      <p> {x.comment} </p>
+    </div>
   </div>
 )
 })
@@ -54,21 +59,27 @@ const batman = this.props.comments.map( (x,i) => {
 
 return(
  <div className = "form">
+  <h1 className="title">{this.props.title} </h1>
+  <h2 className="description">{this.props.description}</h2>
+  <span className = "karmaBox">
+  <h3>{this.props.karma || 0}</h3>
 
-  <h1>{this.props.title} </h1>
-  <h2>{this.props.description}</h2>
-  <h3>{this.props.karma}</h3>
-  <button onClick={()=> this.props.upvote(this.props.id)} > ^ </button>
-  <button onClick={()=> this.props.downvote(this.props.id)}> v </button>
-
- <form onSubmit={this.handleSubmit}>
-   Username <input name="username" onChange={this.handleChange} />
+    <button onClick={()=> this.props.upvote(this.props.id)} > ^ </button>
+    <br/>
+    <button onClick={()=> this.props.downvote(this.props.id)}> v </button>
+  </span>
+ <form className="mainForm" onSubmit={this.handleSubmit}>
+   <label className="commentLabels" htmlFor="username" > Username </label>  <br/> <input className= "userNameInputs" name="username" onChange={this.handleChange} />
    <br/>
-   Comments <input name="comment" onChange={this.handleChange} />
+   <label  className="commentLabels" htmlFor="comment" > Add Comment </label> <br/> <input className = "commentInput" name="comment" onChange={this.handleChange} />
    <br/>
    <button> Submit Comment </button>
+   <br/>
  </form>
- {batman}
+ <div className = "commentDiv">
+  <h2> Here's what people are saying about {this.props.title}! </h2>
+   {mappedComments}
+ </div>
  </div>
 )
 

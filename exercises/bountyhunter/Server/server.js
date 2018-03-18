@@ -1,96 +1,23 @@
 const express = require("express")
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/bountyhunter');
 const app = express();
-const uuid = require('uuid/v1');
+const morgan = require('morgan');
 const bodyParser = require("body-parser");
+const port = process.env.PORT || 7000;
+
+
 app.use(bodyParser.json());
+app.use(morgan('dev'));
 
 
-const Schema = mongoose.Schema;
+app.use("/bounty", require('./routes/bounties.js'))
 
-const bountySchema = new Schema({
-  fName: String,
-  lName: String,
-  Living: String,
-  bAmount: String,
-  type: String
+
+mongoose.connect('mongodb://localhost/bountyHunter', err => {
+  if (err) throw err;
+  console.log("DB Connected.")
 })
 
-const Bounty = mongoose.model('Bounty',bountySchema);
-
-
-
-
-
-const bounties = [
-  {
-
-    fName: "John",
-   lName: "Wayne",
-   Living: "DEAD",
-   bAmount: "9001",
-   type: "Jedi",
-   id: "12"
-   },
-   {fName: "Billy",
-    lName: "Mays",
-    Living: "DEAD",
-    bAmount: "1999",
-    type: "Sith",
-    id: "13"
-    },
-    {fName: "Wayne",
-     lName: "Wayne",
-     Living: "ALIVE",
-     bAmount: "808000",
-     type: "Jedi",
-     id: "14"
-     },
-     {fName: "Bob",
-      lName: "Saget",
-      Living: "ALIVE",
-      bAmount: "21381908",
-      type: "Sith",
-      id: "15"
-      },
-]
-
-app.get("/bounties", (req,res) => {
-  if(req.query.type) {
-    return res.send(bounties.filter(bounties => bounties.type === req.query.type)
-  )}
-  res.send(bounties)
-
-})
-
-app.get("/bounties/:id", (req, res) => {
-  const foundBounty = bounties.find(person => person.id === req.params.id);
-  console.log(req.params.id);
-  res.send(foundBounty)
-})
-
-app.post("/bounties", (req,res) => {
-  req.body.id = uuid();
-  console.log(req.body);
-  bounties.push(req.body);
-  return res.send(req.body);
-})
-
-app.put("/bounties/:id", (req, res) => {
-  const foundBounty = bounties.find(person => person.id === req.params.id);
-  for(let key in req.body){
-      foundBounty[key] = req.body[key];
-    }
-    return res.send(req.body);
-  })
-
-app.delete("/bounties/:id", (req, res) => {
-  const foundBounty = bounties.find(person => person.id === req.params.id);
-    bounties.splice(bounties.indexOf(foundBounty), 1)
-  return res.send(req.body);
-})
-
-app.listen(4000, () => {
-  console.log("Listening in port 4000.")
+app.listen(port, () => {
+  console.log("Listening in port " + port)
 });

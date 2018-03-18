@@ -16,16 +16,17 @@ class App extends Component {
   this.deleteBounty = this.deleteBounty.bind(this);
 }
   componentDidMount(){
-     axios.get("/bounties").then(response => {
+     axios.get("/bounty").then(response => {
       this.setState({bounties: response.data})
       })
-    }  
+
+    }
   handleChange(e){
     this.setState({[e.target.name] : e.target.value});
- 
+
   }
-  
-  handleSubmit(e){   
+
+  handleSubmit(e){
       e.preventDefault();
   var fName = this.state.firstName;
   var lName= this.state.lastName;
@@ -39,45 +40,40 @@ class App extends Component {
           Living,
           type
         }
-console.log(this.state);
     this.addBounty(inputBounty);
-    console.log(this.state);
 
 
   }
-  addBounty(bounty){    
+  addBounty(bounty){
 
-      console.log(bounty);
-      
-    axios.post('/bounties', bounty).then(response =>{
-          console.log(response.data);
+
+    axios.post('/bounty', bounty).then(response =>{
       this.setState((prevState) => {
         return {bounties: [response.data, ...prevState.bounties]}
       })
     })
   }
-  
+
   deleteBounty(id){
-        axios.delete('/bounties/' + id).then(response=>{
+        axios.delete('/bounty/' + id).then(response=>{
             this.setState(prevState=>{
                 const filteredBounties = prevState.bounties.filter(bounty=>{
-                  console.log(bounty);
-                    return bounty.id !== id; 
+
+                    return bounty._id !== id;
                 })
                 return {bounties: filteredBounties}
             })
-            console.log(this.state);
         })
 
     }
-  
-  
-  
+
+
+
   render() {
     return (
       <div>
       <h1 className = "title"> Bounty List </h1>
-      <form onSubmit={this.handleSubmit}> 
+      <form onSubmit={this.handleSubmit}>
       <table>
       <tbody>
         <tr>
@@ -105,7 +101,7 @@ console.log(this.state);
         <button > Submit </button>
       </form>
       <BountyList bounties = {this.state.bounties} delete = {this.deleteBounty}/>
-    
+
       </div>
     );
   }

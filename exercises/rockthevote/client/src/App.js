@@ -18,7 +18,7 @@ class App extends Component {
   }
   
   componentDidMount(){
-    axios.get("/posts").then(response => {
+    axios.get("/post").then(response => {
       this.setState({
         posts: response.data,
       })
@@ -48,7 +48,7 @@ class App extends Component {
   
   addPost(post){
     console.log(post)
-    axios.post('/posts', post).then(response => {
+    axios.post('/post', post).then(response => {
       this.setState((prevState) => {
         return {posts: [ ...prevState.posts,response.data]}
       })
@@ -57,16 +57,18 @@ class App extends Component {
   
   upvote(targetPost){
     const posts = this.state.posts.slice();
-    const foundPost = posts.find(post => post.id === targetPost);
+    console.log(posts);
+    const foundPost = posts.find(post => post._id === targetPost);
+    console.log(foundPost);
     foundPost.karma += 1;
-    axios.put(`/posts/${foundPost.id}`, foundPost)
+    axios.put(`/post/${foundPost._id}`, foundPost)
       this.setState({ posts })
   }
   downvote(targetPost){
     const posts = this.state.posts.slice();
-    const foundPost = posts.find(post => post.id === targetPost);
+    const foundPost = posts.find(post => post._id === targetPost);
     foundPost.karma -= 1;
-    axios.put(`/posts/${foundPost.id}`, foundPost)
+    axios.put(`/post/${foundPost._id}`, foundPost)
       this.setState({ posts })
 }
   
@@ -76,14 +78,17 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-        <div className="Title" > ROCK THE VOTE </div>
-        <div className="inputForm">
-          <form onSubmit={this.handleSubmit}>
-            Post Title: <input onChange = {this.handleChange} name="title" /> <br/>
-            Post Description: <input onChange = {this.handleChange} name="description" /> <br/>
-            <button > Submit </button>
-          </form>
+        <div className="poster">
+          <h3 className="Title" > Add a Post! </h3>
+          <div className="inputForm">
+            <form onSubmit={this.handleSubmit}>
+            <label>  Post Title: </label> <br/> <input onChange = {this.handleChange} className="postTitle" name="title"  /> <br/>
+              <label> Post Description: </label> <br/> <input onChange = {this.handleChange} className="postDescription" name="description" /> <br/>
+              <button > Submit </button>
+            </form>
+          </div>
         </div>
+         <h2 className="Trending"> Here's What's trending now! </h2>
         <Forms state={this.state}  posts={this.state.posts} upvote={this.upvote} downvote={this.downvote} votes={this.state.votes}/>
   
       </div>

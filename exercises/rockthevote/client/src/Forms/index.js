@@ -16,7 +16,7 @@ function Forms(props){
       key={x+i}
       description = {x.description}
       karma = {x.karma}
-      id = {x.id}
+      id = {x._id}
       />
   })
   return(

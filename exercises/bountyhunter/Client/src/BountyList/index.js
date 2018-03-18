@@ -13,12 +13,12 @@ function BountyList(props){
                  <h1> {`Current Status: ${x.Living}`} </h1>
                  <h2> {x.id} </h2>
                  </div>
-              <button onClick={()=>props.delete(x.id)}> Delete </button>  
+              <button onClick={()=>props.delete(x._id)}> Delete </button>  
             </div>
            </div>
 )
   })
-  
+
   return(
     <div>
   {allBounties}

@@ -4,20 +4,134 @@
 
 .Navbar {
   width: 100%;
-  background-color: steelblue;
-  height: 80px;
+  background-size: cover;
+  background-position: right;
+  background-image: url("https://images.theconversation.com/files/205474/original/file-20180208-180829-1aomzo2.jpg?ixlib=rb-1.1.0&rect=0%2C0%2C5599%2C2799&q=45&auto=format&w=1356&h=668&fit=crop");
+  background-repeat: no-repeat;
+  height: 300px;
   line-height: 80px;
+
 }
+.navTextDiv {
+    margin: auto;
+    transform:translateY(50px)
+}
+.navTitle {
+  font-weight: bolder;
+  text-align: center;
+  font-size: 80px;
+  color: white;
+
+}
+.navHeader{
+  text-align: center;
+  font-size: 60px;
+  font-weight: bolder;
+  color: white;
+  font-family: helvetica;
+  transform:translateY(-20px);
+}
+
 .Routes {
   float: right;
   margin-right: 20px;
 }
 body {
+
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #222222
+}
+
+.karmaBox {
+  color: white;
+
+
+}
+
+.postTitle{
+  width: 300px;
+  height: 30px;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.postDescription{
+  width: 300px;
+  height: 100px;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 8px;
 }
 .form{
+    background-color: #4169e1;
   border: 1px solid black;
   text-align: center;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 20px
+}
+
+.comments {
+  display: flex;
+  border-radius: 5px;
+  background-color: grey;
+  padding-left: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.commentDiv {
+  margin-top: 20px;
+}
+
+.commentBox {
+  margin : 10px;
+}
+
+.userNameInputs {
+  width: 300px;
+  height: 30px;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.commentInput {
+  width: 300px;
+  height: 200px;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 8px;
+
+}
+
+.title {
+  margin-top: 20px;
+  font-size: 45px;
+}
+.poster {
+  text-align: center;
+  width: 40%;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border: 1px solid black;
+  padding-bottom: 20px;
+  background-color: #4169e1;
+  border-radius: 20px;
+}
+.Trending {
+  text-align:  center;
+  font-size: 40px;
+  color: white;
+}
+
+.commentLabels {
+  font-family: helvetica sans-serif;
+  font-size: 20px;
+  font-weight: bolder
 }
