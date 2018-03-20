@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    color: white;
+    background-color: steelblue;
+    display: flex;
+    justify-content: space-around;
+
+  }
+
+.title {
+
+ width: 100%;
+ height: 420px;
+ background-color: red;
+
+
+}
+/* For the home page */
+.homepage {
+  width: 100%;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+
+}
+.link {
+  margin: auto;
+  font-family: "CC Wild Words";
+  font-size: 30px;
+  background-color: lightblue;
+  padding: 20px;
+  border-radius: 15px;
+
+}
+.link:visited {
+  color: darkblue;
+}
+.image {
+  width: 350px;
+  height: 350px;
+  border-radius: 40px;
+}
+.doggoImage {
+  width: 600px;
+  height: 600px;
+  border-radius: 40px;
+  transform:translateY(50px);
+}
+.doggoImageDiv {
+  width: 100%;
+  height: 90%;
+  background: url("https://i.ytimg.com/vi/KWSmB8JyqEk/maxresdefault.jpg");
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+
+}
+.doggoDiv{
+  width: 100%;
+  height: 900px;
+  background: url("https://i.ytimg.com/vi/KWSmB8JyqEk/maxresdefault.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.doggoButton {
+  width: 200px;
+  height: 60px;
+  font-family: "CC Wild Words";
+  font-size: 25px;
+}
+
+.hub {
+  width: 100%;
+  height: 60%;
+  transform: translateY(40px);
+  display: flex;
+  justify-content: space-around;
+}
+.videoPage {
+  width: 100%;
+  height: 800px;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.homeText {
+  font-size: 70px;
+  font-family: "CC Wild Words";
+  text-align: center;
+  background-color: dodgerblue;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  border-radius: 50px;
+
+}
+.homeHeader {
+  width: 100%;
+  height: 35%;
+  border-radius: 20px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+
+}
+
+.home {
+  width: 100%;
+  height: 800px;
+  background: url("https://i.ytimg.com/vi/KWSmB8JyqEk/maxresdefault.jpg");
+}
+.dogFavoriteHome {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+.footer {
+  width: 100%;
+  height: 60px;
+  background-color: #b3e6ff;
+}
+
+.dogPictures {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  margin: 15px;
+
+}
+
+.dogFavoriteTitle {
+  font-family: "CC Wild Words";
+  font-size: 40px;
+  text-align: center;
+  padding-top: 30px;
+  margin-top: 10px;
+
+}
+.dogFavoriteDiv{
+  width: 100%;
+  background-color: deeppink;
+}
