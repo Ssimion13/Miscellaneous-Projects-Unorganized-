@@ -7,6 +7,6 @@ import "./styles.css";
 
 ReactDOM.render(
   <BrowserRouter>
-  <App />
-  </BrowserRouter>, 
+    <App />
+  </BrowserRouter>,
   document.getElementById('root'));

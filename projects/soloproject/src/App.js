@@ -7,6 +7,7 @@ import Doggos from "./Doggos";
 import RickAstley from "./RickAstley";
 import DadJokes from "./DadJokes";
 import DoggoFavs from "./DoggoFavs"
+import dadJokeFavs from "./dadJokeFavs"
 
 
 
@@ -21,6 +22,7 @@ class App extends Component {
         <Route path = "/DadJokes" component = {DadJokes} />
         <Route path = "/RickAstley" component = {RickAstley} />
         <Route path = "/DoggoFavs" component = {DoggoFavs} />
+        <Route path = "/dadJokeFavs" component = {dadJokeFavs} />
       </Switch>
       <Footer />
       </div>

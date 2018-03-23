@@ -11,6 +11,7 @@ var me = axios.get("https://api.vschool.io/scottsimion/todo").then(function(resp
   li.appendChild(document.createTextNode(info[i].title));
   ul.appendChild(li);
 }
+    
 let myList = document.getElementsByTagName("LI");
 for(var j = 0; j < myList.length; j++){
 

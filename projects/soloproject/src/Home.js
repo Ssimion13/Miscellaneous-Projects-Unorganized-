@@ -17,20 +17,25 @@ function Home(){
 
   return(
     <div className="home" >
+
       <div className="homeHeader">
         <h1 className="homeText"> Make Your Day!</h1>
       </div>
+
       <div className= "hub">
         <Link to="/Doggos">
           <img className="image" src={randomArrayElement(dogeArray)} alt="doge" />
         </Link>
+
         <Link to="/DadJokes">
           <img className="image" src={randomArrayElement(dadArray)} alt="Dad" />
         </Link>
+
         <Link to="/RickAstley">
           <img className="image" src={randomArrayElement(questionArray)} alt="???" />
         </Link>
-        </div>
+
+      </div>
     </div>
   )
 }

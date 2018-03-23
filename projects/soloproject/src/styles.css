@@ -4,6 +4,7 @@
 
 
 
+
 .navbar {
     width: 100%;
     height: 80px;
@@ -56,7 +57,6 @@
 .doggoImageDiv {
   width: 100%;
   height: 90%;
-  background: url("https://i.ytimg.com/vi/KWSmB8JyqEk/maxresdefault.jpg");
   display: flex;
   vertical-align: middle;
   justify-content: center;
@@ -91,6 +91,7 @@
   height: 800px;
   background-color: lightblue;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -121,17 +122,27 @@
   height: 800px;
   background: url("https://i.ytimg.com/vi/KWSmB8JyqEk/maxresdefault.jpg");
 }
+.mapDogs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+}
 .dogFavoriteHome {
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-right: 80px;
+  margin-left: 40px;
+  align-items: center;
 
 }
 .footer {
   width: 100%;
   height: 60px;
-  background-color: #b3e6ff;
+  background-color: #99ebff
 }
 
 .dogPictures {
@@ -144,13 +155,245 @@
 
 .dogFavoriteTitle {
   font-family: "CC Wild Words";
-  font-size: 40px;
+  height: 100px;
+  font-size: 60px;
+  color: white;
+  background-color: rebeccapurple;
+  border-radius: 30px;
   text-align: center;
   padding-top: 30px;
   margin-top: 10px;
-
+  transform:translateY(10%);
+  margin-left: auto;
+  margin-right: auto;
 }
 .dogFavoriteDiv{
   width: 100%;
-  background-color: deeppink;
+  background: URL("http://longwallpapers.com/Desktop-Wallpaper/doge-wallpapers-high-resolution-For-Desktop-Wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.dadHome {
+  width: 100%;
+  height: 800px;
+  background: url("https://i.ytimg.com/vi/KWSmB8JyqEk/maxresdefault.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dadQuestionDiv{
+  width: 80%;
+  height: auto;
+  background-color: rgba(173,216,230 ,0.5);
+  text-align: center;
+  font-family: "CC Wild Words";
+  border-radius: 5px;
+  padding: 10px;
+}
+.dadQuestion{
+  font-size: 50px;
+
+}
+
+.dadAnswerDiv{
+  width: 80%;
+  height: auto;
+  background-color: rgba(173,216,230 ,0.5);
+  text-align: center;
+  font-family: "CC Wild Words";
+  border-radius: 5px;
+  padding: 10px;
+}
+.dadAnswer{
+  width: 50%;
+  font-size: 40px;;
+  background-color: black;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  padding-top: 12px;
+  border-radius: 15px;
+}
+
+.dadAnswer:hover {
+  color: white;
+}
+
+.dadButton {
+  width: 600px;
+  height: 60px;
+  font-family: "CC Wild Words";
+  font-size: 25px;
+}
+.dadButtonDiv {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.jokeFavoriteTitle {
+    font-family: "CC Wild Words";
+    height: 100px;
+    width: 90%;
+    font-size: 55px;
+    color: black;
+    background-color: lightgrey;
+    border-radius: 30px;
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 10px;
+    transform:translateY(10%);
+    margin-left: auto;
+    margin-right: auto;
+}
+.jokeFavoriteDiv{
+  width: 100%;
+  background: url("https://i.ytimg.com/vi/KWSmB8JyqEk/maxresdefault.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.jokeFavoriteHome {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.mapJokes {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.mapJokes:last-child {
+  padding-bottom: 40px;
+}
+.jokeText {
+  font-family: "CC Wild Words";
+  font-size: 30px;
+  line-height: 1.5;
+  text-align: center;
+  width: 80%;
+  background-color: lightgrey;
+  border-radius: 25px;
+  padding: 10px;
+}
+.favDelete {
+  width: 15%;
+  height: 40px;
+}
+.videoInput {
+  width: 400px;
+  height: 40px;
+  margin-right: 20px;
+  font-family: helvetica;
+  font-size: 16px;
+  text-align: center;
+
+}
+
+.videoButton {
+  height: 40px;
+}
+.videoLabel {
+  font-family: "CC Wild Words";
+  font-size: 18px;
+}
+.videoForm {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.video {
+  margin-bottom: 20px;
+}
+@media (max-width: 750px) {
+  .jokeFavoriteTitle {
+    font-size: 35px;
+  }
+  .jokeText {
+    font-size: 20px;
+  }
+}
+
+@media(max-width: 900px){
+
+  .jokeText {
+    font-size: 25px;
+  }
+  .jokeFavoriteTitle {
+    font-size: 40px;
+  }
+  .dogFavoriteTitle {
+    font-size: 40px;
+  }
+  .dogFavoriteHome {
+    flex-direction: column;
+  }
+  .link {
+    transition-duration: 1s;
+
+    font-size: 14px;
+  }
+  .homeHeader{
+    height: 15%;
+  }
+  .homeText {
+    width: 70%;
+    font-size: 45px;
+    background-color: deepskyblue;
+  }
+  .home {
+    height: 1800px;
+    background-repeat: no-repeat;
+    background-size: cover
+  }
+  .hub {
+
+    flex-direction: column;
+    align-items: center;
+    transform:translateY(-50px);
+  }
+  .image {
+    padding-bottom: 20px;
+  }
+  .doggoImage {
+    height: 450px;
+    width: 450px;
+  }
+  .doggoImageDiv {
+    width: 550px;
+    height: 550px;
+    border-radius: 40px;
+  }
+  .dadButton {
+    width: 300px;
+    height: 60px;
+    margin-bottom: 20px;
+    font-family: "CC Wild Words";
+    font-size: 16px;
+  }
+  .dadQuestion {
+    font-size: 35px;
+  }
+  .dadAnswer {
+    font-size: 25px;
+  }
+  .video {
+    height: 450px;
+    width: 450px;
+  }
+  .videoLabel {
+    text-align: center;
+    font-size: 16px;
+  }
 }

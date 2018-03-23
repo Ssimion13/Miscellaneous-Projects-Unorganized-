@@ -12,7 +12,7 @@ jokeRoutes.get('/', (req,res) => {
 })
 
 jokeRoutes.get('/:id', (req,res) => {
-  Joke.findById(req.param.id, (err, jokes) => {
+  Joke.findById(req.params.id, (err, jokes) => {
     if (err) return res.status(500).send(err);
     return res.send(jokes);
   })
@@ -27,14 +27,14 @@ jokeRoutes.post('/', (req,res) => {
 })
 
 jokeRoutes.put('/:id', (req,res) => {
-  Joke.findByIdAndUpdate(req.param.id, req.body, {new:true}, (err, updatedJoke) => {
+  Joke.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedJoke) => {
     if(err) return res.status(500).send(err);
     return res.send(updatedJoke);
   });
 });
 
 jokeRoutes.delete("/:id", (req,res) => {
-  Post.findByIdAndRemove(req.params.id, (err,removedJoke) => {
+ Joke.findByIdAndRemove(req.params.id, (err,removedJoke) => {
     if(err) return res.status(500).send(err);
     return res.status(202).send(removedJoke);
   });

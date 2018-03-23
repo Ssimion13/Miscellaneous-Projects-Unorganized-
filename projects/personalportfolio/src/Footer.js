@@ -1,8 +1,9 @@
 import React from "react";
 
-function Footer() {
+function Footer (){
   return (
-    <div className="footer">
+    <div className="mainFooterDiv">
+    Footer
     </div>
   )
 }

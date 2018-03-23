@@ -35,9 +35,9 @@ render(){
   var doggoMapping = this.state.doggoArray.map( (x,i) => {
 
      return (
-       <div key = {x + i + 100}>
-     <button  onClick={()=>this.deleteDoggo(x._id)}> Delete </button>
+       <div className = 'mapDogs' key = {x + i + 100}>
      <img key = {x + i} className = "dogPictures" src = {x.URL} alt = "pictures" />
+        <button  onClick={()=>this.deleteDoggo(x._id)}> Delete </button>
      </div>
    )
    })

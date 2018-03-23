@@ -12,6 +12,7 @@ mongoose.connect('mongodb://localhost/soloProject', err => {
 
 app.use("/jokes", require('./routes/jokes.js'));
 app.use("/dogs", require('./routes/dogs.js'));
+app.use("/urls", require('./routes/urls.js'))
 
 app.listen(port, ()=> {
   console.log("Connected on " + port)
