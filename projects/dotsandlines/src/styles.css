@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  box-sizing:border-box;
+  font-family: "Open Sans"
+}
+.app {
+  background-color: whitesmoke;
+}
+.body {
+  background-color: #1f2252;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+h1 {
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 60px;
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+h2 {
+ text-align: center;
+}
+
+.navbar {
+  background-color: steelblue;
+  width: 100%;
+  height: 100px;
+}
+
+.footer {
+  background-color: #4682B3;
+  width: 100%;
+  height: 150px;
+  margin-top: 10px;
+}
+
+.rulesBox {
+  width: 95%;
+  height: 450px;
+  background-color: steelblue;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+}
+
+.homeImage {
+ height: 100%;
+ width: 50%;
+ display: flex;
+ align-items: center;
+ margin-left: 20px;
+}
+.image {
+  height: 90%;
+  width: 90%;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.rules {
+  height: 100%;
+  width: 50%;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+}

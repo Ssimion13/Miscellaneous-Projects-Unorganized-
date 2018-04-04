@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
+import {Route, Switch} from "react-router-dom"
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import Body from "./Body";
-import Projects from "./Projects";
-import About from "./About";
+import mainBody from "./mainBody";
+import Projects from "./Projects/Projects";
+import About from "./About/About";
+import Resume from "./Resume/Resume";
 
 
 class App extends Component {
+
 
 
   render() {
@@ -14,7 +17,12 @@ class App extends Component {
     return (
       <div className="mainBackground">
         <Navbar />
-        <Body />
+        <Switch>
+        <Route exact path = "/" component = {mainBody} />
+        <Route path="/About" component = {About} />
+        <Route path="/Projects" component = {Projects} />
+        <Route path="/Resume" component = {Resume} />
+        </Switch>
         <Footer />
       </div>
     );

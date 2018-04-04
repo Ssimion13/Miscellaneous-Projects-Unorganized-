@@ -1,5 +1,9 @@
 * {
   box-sizing: border-box;
+  font-family: "Roboto";
+}
+a {
+  text-decoration: none;
 }
 
 .mainBackground {
@@ -26,7 +30,6 @@
   font-size: 25px;
   font-weight: bold;
   color: white;
-  text-decoration: none;
   border-radius: 15px;
   margin-top: auto;
   margin-bottom: auto;
@@ -40,15 +43,15 @@
 
 .footer{
   width: 100%;
-  height: 60px;
-  background-color: Blue;
+  height: 120px;
+  background-color: #29293d;
   color: white;
 
 }
 
 .title {
   width: 100%;
-  height: 450px;
+  height: 600px;
   background-image: URL(http://igazabolszerelem.hu/images/images/959762414548d2b39f33ef.jpg);
   background-position: right;
   background-size: cover;
@@ -63,7 +66,10 @@
 }
 
 .Name {
-  font-size: 60px;
+  font-size: 85px;
+  background-color: rgba(0,0,0,0.1);
+  padding: 35px;
+  border-radius: 50%;
 }
 
 .thumbnailDiv {
@@ -71,25 +77,50 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  border-radius: 10px;
 }
 
 .thumbnailHolder {
-  width: 90%;
-  height: 350px;
+  width: 95%;
+  height: 250px;
   background-color: whitesmoke;
   margin-top: 20px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 
-
 }
+
 .thumbnail {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 33%;
   height: 100%;
+  text-align: center;
 }
+
+.thumbnail:hover  {
+  transition-duration: 0.3s;
+  background-color: #3E0CA6;
+  border-radius: 20px;
+
+}
+.thumbnail:hover .anchorText {
+  color: white;
+}
+
+.anchorText{
+  font-family: "Roboto" sans-serif;
+  color: #383838;
+  font-size: 25px;
+  font-weight: bold;
+
+}
+
+
 .thumbnailImage {
   height: 140px;
   width: 140px;
@@ -99,4 +130,34 @@
 
 .footer {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footerPlaceholderIcons {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  border-radius: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 8px;
+
+}
+.footerPlaceholderIcons:hover {
+  transition-duration: 0.4s;
+  background-color: grey;
+}
+
+.sideBodies {
+  width: 95%;
+  height: 500px;
+  background-color: whitesmoke;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.borders {
+  font-size: 30px;
+  margin: 10px;
 }
