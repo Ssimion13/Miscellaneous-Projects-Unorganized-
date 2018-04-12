@@ -2,10 +2,9 @@ import React from "react"
 
 
 function Title (props) {
-console.log(props);
   const styles = {
     background: `URL(${props.image})`,
-    backgroundPosition: "right",
+    backgroundPosition: `${props.position}` || "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     opacity: `${props.opacity} || 1`,

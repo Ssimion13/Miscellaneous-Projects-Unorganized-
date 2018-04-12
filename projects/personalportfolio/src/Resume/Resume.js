@@ -1,11 +1,12 @@
 import React from "react";
 import Title from "../Title";
 import ResumeBody from "./ResumeBody"
+import ResumePicture from "./ResumeClipart.png"
 
 function Resume () {
   return (
     <div className="body">
-     <Title title="My Resume" image="https://www.site123.ca/wp-content/uploads/tasks-page.jpeg" color="#383838" />
+     <Title image={ResumePicture} position = "top"  />
      <ResumeBody />
     </div>
   )

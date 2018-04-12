@@ -3,11 +3,11 @@ import React from "react";
 function Footer (){
   return (
     <div className="footer">
-     <a href="http://www.facebook.com" className="footerPlaceholderIcons">  My Facebook </a>
+     <a href="https://www.facebook.com/AeroReborn" className="footerPlaceholderIcons">  My Facebook </a>
      <div className="borders"> || </div>
-     <a href='http://www.github.com' className="footerPlaceholderIcons">  My Github </a>
+     <a href='https://github.com/Ssimion13' className="footerPlaceholderIcons">  My Github </a>
      <div className="borders"> || </div>
-     <a href='http://www.linkedin.com' className="footerPlaceholderIcons"> My LinkedIn </a>
+     <a href='https://www.linkedin.com/in/scott-simion-b96443161/' className="footerPlaceholderIcons"> My LinkedIn </a>
     </div>
   )
 }

@@ -6,6 +6,7 @@ import mainBody from "./mainBody";
 import Projects from "./Projects/Projects";
 import About from "./About/About";
 import Resume from "./Resume/Resume";
+import ResumePage from "./ResumePage";
 
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
         <Route path="/About" component = {About} />
         <Route path="/Projects" component = {Projects} />
         <Route path="/Resume" component = {Resume} />
+        <Route path="/ResumePage" component = {ResumePage} />
         </Switch>
         <Footer />
       </div>
