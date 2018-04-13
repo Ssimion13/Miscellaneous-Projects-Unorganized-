@@ -67,9 +67,10 @@ a {
 
 }
 .portrait {
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 550px;
   border-radius: 5%;
+  padding: 5px;
 }
 .Name {
   font-size: 85px;
@@ -86,12 +87,10 @@ a {
   border-radius: 10px;
 }
 .personalInformation {
-  width: 95%;
-  margin: auto;
-  margin-top: 20px;
   background-color: whitesmoke;
   display: flex;
   border-radius: 10px;
+  grid-area: picture;
 }
 .infoDivider {
   width: 100%;
@@ -101,10 +100,15 @@ a {
 .contactInfo {
   border: 1px solid black;
   margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
 }
 .thumbnailHolder {
   width: 95%;
   height: 250px;
+
   background-color: whitesmoke;
   margin-top: 20px;
   border-radius: 10px;
@@ -179,22 +183,39 @@ a {
 }
 
 .aboutBodies {
-  width: 95%;
+  width: 98%;
+  margin-top: 15px;
   background-color: whitesmoke;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-}
+  display: grid;
+  grid-template-areas:
+  'picture aboutWeb aboutWeb'
+  'picture aboutme aboutme'
+  'picture mybackground mybackground';
 
+}
+.aboutWebDevelopment {
+  grid-area: aboutWeb;
+  font-size: 25px;
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
 .borders {
   font-size: 30px;
   margin: 10px;
 }
 
 .aboutProfile {
-  width: 95%;
-  height: 400px;
-  border: 1px solid black;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  grid-area: aboutme;
+  font-size: 25px;
+}
+.aboutBackground {
+  padding: 10px;
+  grid-area: mybackground;
+  font-size: 25px;
 }
 
 .profileDiv {

@@ -68,7 +68,7 @@ class ProjectTwo extends Component {
         <CardTitle title={titleText}  titleStyle={pictureTextStyle} expandable={true} />
         <CardText expandable={true} style={Color}>
           <div className = "appLinkDiv">
-            <a className="appLink" href="https://make-your-day.herokuapp.com/"> View Website</a>
+            <a className="appLink" href="http://thriftstoreblackjack.surge.sh/"> View Website</a>
           </div>
           <div className = "projectScreenshots">
             <img className="projectImages" alt = "blackjackpicture" src={WholeBlackjackSS} / >
